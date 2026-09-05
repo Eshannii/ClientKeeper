@@ -19,7 +19,9 @@
       },
       "predictiveBackGestureEnabled": false,
       "package": "com.nayyab_noor.clientkeeper",
-      "permissions": ["SCHEDULE_EXACT_ALARM"]
+      "permissions": [
+        "SCHEDULE_EXACT_ALARM"
+      ]
     },
     "web": {
       "output": "static",
@@ -40,6 +42,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "e3d896f1-36d3-4799-b7ea-86d9dbabaa46"
+      }
     }
   }
 }

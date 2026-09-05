@@ -8,7 +8,7 @@ const AddTaxHeader = () => {
   return (
     <View>
       <Image
-        source={require("./../assets/images/addTax.png")}
+        source={require("./../assets/images/addTax.jpg")}
         style={{ width: "100%", height: 250 }}
       />
       <TouchableOpacity

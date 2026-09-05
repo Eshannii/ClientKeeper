@@ -104,7 +104,7 @@ const AddCaselaw = () => {
         keyboardShouldPersistTaps="handled"
       >
         <Image
-          source={require("./../assets/images/notes.png")}
+          source={require("./../assets/images/notes.jpg")}
           style={{ height: 220, width: "100%" }}
         />
 

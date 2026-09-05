@@ -1,18 +1,26 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useColorScheme } from 'react-native';
+import { Stack } from "expo-router";
+import { useEffect } from "react";
+import notifee, { EventType } from "@notifee/react-native";
+import {
+  scheduleAllHearingNotifications,
+  setupNotifications,
+} from "../../service/notification";
+import { scheduleAllTaxReminders } from "../../service/taxNotification";
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
-
-SplashScreen.preventAutoHideAsync();
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+export default function RootLayout() {
+  useEffect(() => {
+    setupNotifications();
+    scheduleAllHearingNotifications();
+    scheduleAllTaxReminders();
+  }, []);
+  useEffect(() => {
+    setupNotifications();
+    scheduleAllHearingNotifications();
+  }, []);
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="(tabs)" />
+      <Stack.Screen name="login" />
+    </Stack>
   );
 }

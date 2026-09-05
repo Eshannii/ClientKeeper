@@ -30,9 +30,6 @@ yarn-error.*
 .DS_Store
 *.pem
 
-# local env files
-.env*.local
-
 # typescript
 *.tsbuildinfo
 
@@ -41,3 +38,26 @@ example
 # generated native folders
 /ios
 /android
+src/config/FirebaseConfig.js
+
+# env files
+.env
+.env.local
+.env*.local
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# editors
+.vscode/
+.idea/
+
+# temp files
+*.tmp
+*.temp
+
+# OS
+Thumbs.db
